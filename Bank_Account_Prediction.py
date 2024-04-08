@@ -69,8 +69,7 @@ if submit:
     for i,j in encoder.items():
         user_input[i]=j.transform([user_input[i]])[0]
     features=[value for value in user_input.values()]
-    """for i,j in user_input.items():
-        features.append(user_input[i])"""
+    
     features.insert(2,household_size)
     features.insert(3, age)
     st.write('The Answer is', rc.predict([features])[0])
